@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class VrAccountsConfig(AppConfig):
+class TanRailAccountsConfig(AppConfig):
     default_auto_field = "django.db.models.BigAutoField"
     name = "tanrail_accounts"

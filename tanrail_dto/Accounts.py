@@ -35,7 +35,7 @@ class UserFilteringInputObject(graphene.InputObjectType):
     items_per_page = graphene.Int()
 
 class USerProfileResponseObject(graphene.ObjectType):
-    data = graphene.Field(UserProfileObject)
+    data = graphene.List(UserProfileObject)
     response = graphene.Field(ResponseObject)
     page = graphene.Field(PageObject)
 

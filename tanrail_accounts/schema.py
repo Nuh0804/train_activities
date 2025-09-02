@@ -23,12 +23,12 @@ class Query(ObjectType):
         try:
             users = UserProfile.objects.values('profile_unique_id')
 
-            paginated_tour_data = Paginator(users, filtering.items_per_page if filtering.items_per_page else 10)
-            required_page = paginated_tour_data.page(filtering.page_number if filtering.page_number else 1)
+            paginated_user_data = Paginator(users, filtering.items_per_page if filtering.items_per_page else 10)
+            required_page = paginated_user_data.page(filtering.page_number if filtering.page_number else 1)
             page_object = PageObject.get_page(required_page)
 
-            paginated_tour_data = list(map(lambda x: UserProfile.get_user_profile_data(str(x['profile_unique_id'])), required_page))
-            return info.return_type.graphene_type(response=ResponseObject.get_response(id="1"), data = paginated_tour_data, page=page_object)
+            paginated_user_data = list(map(lambda x: UserProfileBuilder.get_user_profile_and_role_data(str(x['profile_unique_id'])), required_page))
+            return info.return_type.graphene_type(response=ResponseObject.get_response(id="1"), data = paginated_user_data, page=page_object)
         
         except Exception as e:
             print(e)

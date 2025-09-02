@@ -99,7 +99,7 @@ class CreateUserMutation(graphene.Mutation):
             'receiver_details': user.email,
             'user': user,
             'url': url,
-            'subject': "eTour Activate Account"
+            'subject': "my site Activate Account"
         }        
 
         CustomEmailBackend.send_messages(body, '../htmls/create_password.html')
@@ -159,9 +159,6 @@ class UpdateUsersMutation(graphene.Mutation):
         except Exception as e:
             print(e)
             return cls(response=ResponseObject.get_response(id="5"), data=None)
-
-
-
 
     
 class DeleteUsersMutation(graphene.Mutation):
@@ -267,7 +264,7 @@ class ForgotPasswordMutation(graphene.Mutation):
                     'receiver_details': user.email,
                     'user': user,
                     'url': url,
-                    'subject': "eTour Password Reset"
+                    'subject': "my site Password Reset"
                 }
 
                 CustomEmailBackend.send_messages(body, '../htmls/forget_password.html')
@@ -400,7 +397,7 @@ class ResendPasswordSetEmail(graphene.Mutation):
                 'receiver_details': user.email,
                 'user': user,
                 'url': url,
-                'subject': "eTour Activate Account"
+                'subject': "my site Activate Account"
             }        
 
             CustomEmailBackend.send_messages(body, '../htmls/create_password.html')
