@@ -1,11 +1,11 @@
-from django.apps import apps
 from django.contrib import admin
 from .models import *
+from django.apps import apps
+
 # Register your models here.
 
-
-# Get the AppConfig for the 'weris_uaa' app
-app_config = apps.get_app_config('tanrail_uaa')
+# Get the AppConfig for the 'tcra_ccc_feedbacks' app
+app_config = apps.get_app_config('tanrail_accounts')
 
 # Get all models in the app
 models = app_config.get_models()

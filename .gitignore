@@ -3,3 +3,8 @@ tanrail_dto/__pycache__/*
 tanrail_service/__pycache__/*
 tainrail_uaa/__pycache__/*
 tanrails/__pycache__/*
+rail/
+tanrail_uaa/migrations/__pycache__/
+tanrail_uaa/__pycache__/
+tanrail_service/migrations/__pycache__/
+tanrail_uaa/migrations/__pycache__/

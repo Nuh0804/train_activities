@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'graphene_django',
     'tanrail_service',
-    'tanrail_uaa'
+    'tanrail_uaa',
+    'tanrail_accounts'
 ]
 
 MIDDLEWARE = [
